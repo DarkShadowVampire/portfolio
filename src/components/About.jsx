@@ -19,12 +19,12 @@ const About = () => {
                 <div className='website'>
                     <p className='contact__type'>Website</p>
                     <a
-                        href='#'
+                        href='https://sourav-swarnakar.netlify.app/'
                         target='_blank'
                         rel='noreferrer noopener'
                         className='contact__info'
                     >
-                       ###
+                       sourav-swarnakar.netlify.app
                     </a>
                 </div>
                 <div className='email'>

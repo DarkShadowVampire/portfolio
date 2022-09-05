@@ -10,14 +10,14 @@ const AllProjects = [
         description:
             "A basic todo list application that allows users to add, delete, and edit tasks.",
         techStack: ["HTML", "CSS", "JavaScript"],
-        url: "https://github.com/predator2v0/todo-app",
+        url: "#",
     },
     {
         name: "Portfolio",
         description:
             "A portfolio website that allows users to view my projects and learn more about me.",
         techStack: ["HTML", "CSS", "JavaScript", "React"],
-        url: "https://github.com/predator2v0/portfolio",
+        url: "https://github.com/DarkShadowVampire/portfolio",
     },
     // {
     //     name: "Java beginners demo",
