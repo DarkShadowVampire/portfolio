@@ -1,8 +1,8 @@
 const Experiences = [
     {
-        designation: "Application Development Associate",
+        designation: "Application Development Analyst",
         company: "Accenture",
-        duration: "June 2021 - Ongoing",
+        duration: "Feb 2021 - Present",
         location: "Bangalore",
     },
 ];

@@ -1,10 +1,9 @@
 const AllProjects = [
     {
-        name: "House Rental Management System",
-        description:
-            "A house rental management system that allows users to rent houses and manage their rental history.",
-        techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-        url: "https://github.com/predator2v0/hrms",
+        name: "Pizzeria",
+        description:"A online food delivery app, where user can order various kind of Pizza",
+        techStack: ["Angular", "SCSS", "MongoDb","Node Js","Express Js"],
+        url: "#",
     },
     {
         name: "Simple TODO",
@@ -35,18 +34,11 @@ const AllProjects = [
     //     url: "https://github.com/predator2v0/collection-framework",
     // },
     {
-        name: "Tic-Tac-Toe",
+        name: "My Dream College",
         description:
-            "A simple tic tac toe game that allows users to play against computer. developed in java language using collection api for handling game logic.",
-        techStack: ["java SE"],
-        url: "https://github.com/predator2v0/collection-framework",
-    },
-    {
-        name: "Anarghya",
-        description:
-            "A web portal for college students for their tech fest registrations.",
-        techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-        url: "https://github.com/predator2v0/anarghya2020",
+            "A web portal for students to find colleges and getting information of the college",
+        techStack: ["Android Studio"],
+        url: "#",
     },
 ];
 module.exports = AllProjects;

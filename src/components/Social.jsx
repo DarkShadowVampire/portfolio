@@ -5,7 +5,7 @@ const Social = () => {
         <div className='social__icons'>
             <div className='email'>
                 <a
-                    href='mailto:papu.roul99@gmail.com'
+                    href='mailto:srvswarnakar@gmail.com'
                     target='_blank'
                     rel='noreferrer noopener'
                 >
@@ -14,7 +14,7 @@ const Social = () => {
             </div>
             <div className='github'>
                 <a
-                    href='https://github.com/predator2v0'
+                    href='https://github.com/DarkShadowVampire'
                     target='_blank'
                     rel='noreferrer noopener'
                 >
@@ -23,7 +23,7 @@ const Social = () => {
             </div>
             <div className='twitter'>
                 <a
-                    href='https://twitter.com/predator2v0'
+                    href='#'
                     target='_blank'
                     rel='noreferrer noopener'
                 >
@@ -32,7 +32,7 @@ const Social = () => {
             </div>
             <div className='hackerrank'>
                 <a
-                    href='https://hackerrank.com/predator2v0'
+                    href='#'
                     target='_blank'
                     rel='noreferrer noopener'
                 >
@@ -41,7 +41,7 @@ const Social = () => {
             </div>
             <div className='instagram'>
                 <a
-                    href='https://instagram.com/predator2v0'
+                    href='https://instagram.com/dark_shadow_vampire'
                     target='_blank'
                     rel='noreferrer noopener'
                 >

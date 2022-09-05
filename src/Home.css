@@ -16,9 +16,9 @@
     height: 150px;
     background: linear-gradient(
         149deg,
-        rgba(178, 121, 184, 1) 0%,
-        rgba(217, 180, 215, 1) 25%,
-        rgba(187, 179, 197, 1) 85%
+        #81cdc6 0%,
+        #b3e0dc 25%,
+        #81cdc6 85%
     );
     grid-column: 1/-1;
 }
@@ -60,10 +60,12 @@
 }
 .resume__button {
     background: #fbf9fc;
+    cursor: pointer;
 }
 .hire__button {
-    background-color: #665893;
+    background-color: #4fb9af;
     color: #fbf9fc;
+    cursor: pointer;
 }
 /* about component */
 .about {
@@ -82,7 +84,7 @@
     margin-top: 2rem;
     padding: 1rem;
     grid-column: 2/3;
-    background-color: rgba(102, 88, 147, 0.3);
+    background-color: #b3e0dc;
     border-radius: 5px;
     font-size: 0.5rem;
     display: grid;
@@ -93,10 +95,10 @@
     font-size: 0.65rem;
 }
 .contact__type {
-    color: #665893;
+    color: #1c0f44;
 }
 .contact__info {
-    color: #665893;
+    color: #1c0f44;
     font-weight: bold;
     text-decoration: none;
 }
@@ -157,7 +159,7 @@
 .exp__card--footer p {
     padding: 0.2rem 1rem 0.2rem 0.5rem;
     font-size: 0.65rem;
-    color: #665893;
+    color: #1c0f44;
     font-weight: 500;
 }
 /* projects component */
@@ -205,7 +207,7 @@
     justify-content: space-between;
 }
 .tech__stack {
-    color: #665893;
+    color: #1c0f44;
 }
 .tech__stack--title {
     font-size: 0.7rem;
@@ -249,9 +251,9 @@
     margin: 0;
     background: linear-gradient(
         149deg,
-        rgba(178, 121, 184, 1) 0%,
-        rgba(217, 180, 215, 1) 25%,
-        rgba(187, 179, 197, 1) 85%
+        #81cdc6 0%,
+        #b3e0dc 25%,
+        #81cdc6 85%
     );
     display: flex;
     justify-content: space-around;
@@ -261,6 +263,5 @@
     text-align: center;
 }
 .footer .footer__copyright{
-    font-size: 0.7rem;
-    margin-top: auto;
+    font-size: 0.9rem;
 }

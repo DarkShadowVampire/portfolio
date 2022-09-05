@@ -15,7 +15,7 @@ const ExpCard = (props) => {
                 <p className='duration'>{duration}</p>
             </div>
             <div className='exp__card--footer'>
-                <p>Technologies: React, Storybook, SCSS, Jest, ES6, Git </p>
+                <p>Technologies: Angular, React, Flutter, SCSS, Node Js, Express, Jest, ES6, Git </p>
             </div>
         </div>
     );

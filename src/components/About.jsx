@@ -7,9 +7,9 @@ const About = () => {
             <p>
                 I am a software developer based in Bangalore, India. I have a
                 passion for building web applications and I primarily work on
-                MERN stack application development. I love to learn new
+                MEAN stack application development. I love to learn new
                 technologies. I am currently working in an MNC, developing a web
-                application for a client using MERN stack.
+                application for a client using MEAN stack.
             </p>
             <div className='contact'>
                 <div className='location'>
@@ -19,34 +19,34 @@ const About = () => {
                 <div className='website'>
                     <p className='contact__type'>Website</p>
                     <a
-                        href='https://subhakanta-roul.netlify.app'
+                        href='#'
                         target='_blank'
                         rel='noreferrer noopener'
                         className='contact__info'
                     >
-                        subhakanta-roul.netlify.app &#8599;
+                       ###
                     </a>
                 </div>
                 <div className='email'>
                     <p className='contact__type'>Email</p>
                     <a
-                        href='mailto:papu.roul99@gmail.com'
+                        href='mailto:srvswarnakar@gmail.com'
                         target='_blank'
                         rel='noreferrer noopener'
                         className='contact__info'
                     >
-                        papu.roul99@gmail.com &#8599;
+                        srvswarnakar@gmail.com &#8599;
                     </a>
                 </div>
                 <div className='github'>
                     <p className='contact__type'>GitHub</p>
                     <a
-                        href='https://github.com/predator2v0'
+                        href='https://github.com/DarkShadowVampire'
                         target='_blank'
                         rel='noreferrer noopener'
                         className='contact__info'
                     >
-                        @predator2v0 &#8599;
+                        @DarkShadowVampire &#8599;
                     </a>
                 </div>
             </div>
