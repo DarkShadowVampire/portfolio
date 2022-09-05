@@ -16,9 +16,9 @@
     height: 150px;
     background: linear-gradient(
         149deg,
-        #81cdc6 0%,
+        #05d3fc 0%,
         #b3e0dc 25%,
-        #81cdc6 85%
+        #05d3fc 85%
     );
     grid-column: 1/-1;
 }
@@ -251,9 +251,9 @@
     margin: 0;
     background: linear-gradient(
         149deg,
-        #81cdc6 0%,
+        #05d3fc 0%,
         #b3e0dc 25%,
-        #81cdc6 85%
+        #05d3fc 85%
     );
     display: flex;
     justify-content: space-around;
