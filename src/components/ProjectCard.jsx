@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
             </div>
             <div className='project__card--footer'>
                 <a href={url} target='_blank' rel='noreferrer'>
-                    view project{" "}
+                    View Project{" "}
                     <img
                         src='img/github-icon.svg'
                         alt='github link'

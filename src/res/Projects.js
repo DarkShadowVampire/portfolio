@@ -3,14 +3,7 @@ const AllProjects = [
         name: "Pizzeria",
         description:"A online food delivery app, where user can order various kind of Pizza",
         techStack: ["Angular", "SCSS", "MongoDb","Node Js","Express Js"],
-        url: "#",
-    },
-    {
-        name: "Simple TODO",
-        description:
-            "A basic todo list application that allows users to add, delete, and edit tasks.",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        url: "#",
+        url: "https://github.com/DarkShadowVampire/pizzeria",
     },
     {
         name: "Portfolio",
@@ -18,6 +11,13 @@ const AllProjects = [
             "A portfolio website that allows users to view my projects and learn more about me.",
         techStack: ["HTML", "CSS", "JavaScript", "React"],
         url: "https://github.com/DarkShadowVampire/portfolio",
+    },
+    {
+        name: "Simple TODO",
+        description:
+            "A basic todo list application that allows users to add, delete, and edit tasks.",
+        techStack: ["HTML", "CSS", "JavaScript"],
+        url: "#",
     },
     // {
     //     name: "Java beginners demo",
