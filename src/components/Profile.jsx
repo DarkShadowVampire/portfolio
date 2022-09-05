@@ -2,7 +2,7 @@ import React from "react";
 
 const Profile = () => {
     const viewResume = () =>{
-        window.open('res/Sourav Swarnakar CV.png', '_blank');
+        window.open('res/Sourav Swarnakar CV.pdf', '_blank');
     }
     const hireMe = () =>{
         window.open('mailto: srvswarnakar@gmail.com', '_blank');
