@@ -5,7 +5,7 @@ const About = () => {
         <div className='about'>
             <h4>About me</h4>
             <p>
-                I am a software developer based in Bangalore, India. I have a
+                I am a software developer based in Kolkata, India. I have a
                 passion for building web applications and I primarily work on
                 MEAN stack application development. I love to learn new
                 technologies. I am currently working in an MNC, developing a web
@@ -14,7 +14,7 @@ const About = () => {
             <div className='contact'>
                 <div className='location'>
                     <p className='contact__type'>Location</p>
-                    <p className='contact__info'>Bangalore, India</p>
+                    <p className='contact__info'>Kolkata, India</p>
                 </div>
                 <div className='website'>
                     <p className='contact__type'>Website</p>
