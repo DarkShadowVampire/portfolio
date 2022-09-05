@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 .hire__button {
-    background-color: #4fb9af;
+    background-color: #69e4fd;
     color: #fbf9fc;
     cursor: pointer;
 }
@@ -84,7 +84,7 @@
     margin-top: 2rem;
     padding: 1rem;
     grid-column: 2/3;
-    background-color: #b3e0dc;
+    background-color: #69e4fd;
     border-radius: 5px;
     font-size: 0.5rem;
     display: grid;
