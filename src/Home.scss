@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+$primary-bg: #05d3fc;
+$secondary-bg: #b3e0dc;
+$accent-bg: #69e4fd;
+$white: #fbf9fc;
+$primary-text: #1c0f44;
+$box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+@mixin card {
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+// Outer container [Home]
+.container {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.wall {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(
+    149deg,
+    $primary-bg 0%,
+    $secondary-bg 25%,
+    $primary-bg 85%
+  );
+  grid-column: 1/-1;
+}
+
+.profile {
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-bottom: 2px solid;
+
+  &__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    top: -3rem;
+    border: 5px solid $white;
+    box-shadow: $box-shadow;
+  }
+
+  &__details {
+    position: relative;
+    left: 1rem;
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.action__buttons {
+  margin-left: auto;
+
+  button {
+    padding: 0.3rem 0.4rem;
+    margin: 0.8rem 0.5rem;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+
+    &.resume__button {
+      background: $white;
+    }
+
+    &.hire__button {
+      background-color: $accent-bg;
+      color: $white;
+    }
+  }
+}
+
+.about {
+  padding: 1rem 0;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  border-bottom: 2px solid;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  h4,
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.contact {
+  margin-top: 2rem;
+  padding: 1rem;
+  grid-column: 2/3;
+  background-color: $accent-bg;
+  border-radius: 5px;
+  font-size: 0.5rem;
+  display: grid;
+  grid-template-columns: 0.7fr repeat(3, 1fr);
+
+  p,
+  a {
+    font-size: 0.65rem;
+  }
+
+  &__type {
+    color: $primary-text;
+  }
+
+  &__info {
+    color: $primary-text;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.experience {
+  padding: 1rem 0;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  border-bottom: 2px solid;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  h4,
+  p {
+    font-size: 0.9rem;
+  }
+
+  &__all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+}
+
+.exp__card {
+  @include card;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+
+  &--image {
+    width: 35px;
+    height: 35px;
+    margin: 0.5rem 1rem auto 0.5rem;
+    border-radius: 50%;
+    grid-column: 1/2;
+  }
+
+  &--details {
+    margin: 0.5rem 0;
+    grid-column: 2/3;
+
+    .designation {
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
+    .company {
+      font-size: 0.65rem;
+      font-weight: 550;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .duration {
+      font-size: 0.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &--footer {
+    border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+    grid-column: 1/-1;
+
+    p {
+      padding: 0.2rem 1rem 0.2rem 0.5rem;
+      font-size: 0.65rem;
+      color: $primary-text;
+      font-weight: 500;
+    }
+  }
+}
+
+.projects {
+  padding: 1rem 0;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  border-bottom: 2px solid;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  &__all {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+}
+
+.project__card {
+  @include card;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 6px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 3px;
+    z-index: 1;
+    background: conic-gradient(
+      #ff6b6b,
+      #f7d716,
+      #1be7ff,
+      #6a4cff,
+      #ff6b6b
+    );
+    background-size: 100% 100%;
+    filter: blur(1);
+    animation: borderGradient 3s linear infinite;
+    pointer-events: none;
+
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0) padding-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0) padding-box;
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  p {
+    padding: 0.2rem 1rem 0.2rem 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &--header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .project__title {
+      font-weight: bold;
+      font-size: 0.8rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &--body {
+    padding: 0.5rem 0;
+    min-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &--footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: right;
+
+    a {
+      padding: 0 0.5rem;
+      text-decoration: none;
+      color: #000;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.tech__stack {
+  color: $primary-text;
+
+  &--title {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}
+
+.github__icon {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+// Social component
+.social__icons {
+  grid-column: 2/3;
+  grid-row: 6/7;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+
+  div {
+    margin: 1rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+// Footer component
+.footer {
+  grid-column: 1/-1;
+  grid-row: 7/8;
+  padding: 0.5rem 0 0.3rem 0;
+  margin: 0;
+  background: linear-gradient(
+    149deg,
+    $primary-bg 0%,
+    $secondary-bg 25%,
+    $primary-bg 75%
+  );
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    font-size: 0.9rem;
+  }
+}
+
+// Keyframes for the animated gradient
+@keyframes borderGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
