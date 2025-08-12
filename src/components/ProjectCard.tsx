@@ -1,7 +1,13 @@
 import React from "react";
 
-const ProjectCard = (props) => {
-    const { name, description, techStack, url } = props;
+interface ProjectCardProps {
+    name: string;
+    description: string;
+    techStack: string[];
+    url: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, techStack, url }) => {
     return (
         <div className='project__card'>
             <div className='project__card--header'>
@@ -15,7 +21,7 @@ const ProjectCard = (props) => {
                 </p>
             </div>
             <div className='project__card--footer'>
-                <a href={url} target='_blank' rel='noreferrer'>
+                <a href={url} target='_blank' rel='noreferrer noopener' aria-label={`View ${name} project (opens in a new tab)`}>
                     View Project{" "}
                     <img
                         src='img/github-icon.svg'
