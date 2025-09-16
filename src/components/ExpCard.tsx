@@ -5,7 +5,7 @@ interface ExpCardProps {
   company: string;
   duration: string;
   location: string;
-  technologies?: string; 
+  technologies?: string;
 }
 
 const ExpCard: React.FC<ExpCardProps> = ({

@@ -228,23 +228,15 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 3px;
     z-index: 1;
-    background: conic-gradient(
-      #ff6b6b,
-      #f7d716,
-      #1be7ff,
-      #6a4cff,
-      #ff6b6b
-    );
+    background: conic-gradient(#ff6b6b, #f7d716, #1be7ff, #6a4cff, #ff6b6b);
     background-size: 100% 100%;
     filter: blur(1);
     animation: borderGradient 3s linear infinite;
     pointer-events: none;
 
-    mask:
-      linear-gradient(#fff 0 0) content-box,
+    mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0) padding-box;
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0) padding-box;
     mask-composite: exclude;
     -webkit-mask-composite: xor;
