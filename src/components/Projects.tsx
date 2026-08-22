@@ -13,7 +13,7 @@ interface Project {
 
 const Projects: React.FC = () => {
     return (
-        <div className='projects'>
+        <section id="projects" className='projects'>
             <h4>Projects</h4>
             <div className='projects__all'>
                 {AllProjects.map((project: Project, index: number) => (
@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

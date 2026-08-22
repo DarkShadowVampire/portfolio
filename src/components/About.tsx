@@ -2,13 +2,13 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <h4>About me</h4>
       <p>
         I am a software developer based in Kolkata, India. I have a passion for
         building web applications and I primarily work on Guidewire Portal &
-        MERN stack application development. I love to learn new technologies. I
-        am currently working in a Big 4 MNC.
+        MERN stack application development. I love to learn new technologies.
+        I'm currently working in PWC - AC India.
       </p>
       <address className="contact">
         <div className="location">
@@ -49,6 +49,18 @@ const About: React.FC = () => {
             aria-label="GitHub profile (opens in a new tab)"
           >
             @DarkShadowVampire &#8599;
+          </a>
+        </div>
+        <div className="linkedin">
+          <p className="contact__type">LinkedIn</p>
+          <a
+            href="https://www.linkedin.com/in/sourav-swarnakar"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="contact__info"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >
+            LinkedIn &#8599;
           </a>
         </div>
       </address>

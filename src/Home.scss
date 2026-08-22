@@ -7,24 +7,91 @@
   box-sizing: border-box;
 }
 
-$primary-bg: #05d3fc;
-$secondary-bg: #b3e0dc;
-$accent-bg: #69e4fd;
-$white: #fbf9fc;
-$primary-text: #1c0f44;
 $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 
 @mixin card {
   border-radius: 5px;
   box-shadow: $box-shadow;
-  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border: 1.5px solid var(--border-color);
 }
 
 // Outer container [Home]
 .container {
+  --primary-bg: #05d3fc;
+  --secondary-bg: #b3e0dc;
+  --accent-bg: #69e4fd;
+  --page-bg: #fbf9fc;
+  --surface-bg: #ffffff;
+  --primary-text: #1c0f44;
+  --body-text: #171524;
+  --border-color: rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  position: relative;
+  color: var(--body-text);
+  background-color: var(--page-bg);
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
+
+  &.dark {
+    --primary-bg: #172a46;
+    --secondary-bg: #244d63;
+    --accent-bg: #2fa6b8;
+    --page-bg: #10151d;
+    --surface-bg: #1b2430;
+    --primary-text: #b9f5fb;
+    --body-text: #eef6f7;
+    --border-color: rgba(255, 255, 255, 0.16);
+  }
+}
+
+.theme__button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: 3.75rem;
+  height: 2rem;
+  padding: 0;
+  border: 2px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--accent-bg);
+  box-shadow: $box-shadow;
+  cursor: pointer;
+
+  .theme__icon {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    line-height: 1;
+
+    &--light {
+      left: 0.35rem;
+    }
+
+    &--dark {
+      right: 0.35rem;
+      color: var(--surface-bg);
+    }
+  }
+
+  .theme__thumb {
+    position: absolute;
+    top: 0.18rem;
+    left: 0.2rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 50%;
+    background: var(--surface-bg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 180ms ease;
+  }
+
+  &.is-dark .theme__thumb {
+    transform: translateX(1.75rem);
+  }
 }
 
 .wall {
@@ -32,9 +99,9 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   height: 150px;
   background: linear-gradient(
     149deg,
-    $primary-bg 0%,
-    $secondary-bg 25%,
-    $primary-bg 85%
+    var(--primary-bg) 0%,
+    var(--secondary-bg) 25%,
+    var(--primary-bg) 85%
   );
   grid-column: 1/-1;
 }
@@ -43,7 +110,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   grid-column: 2/3;
   grid-row: 2/3;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid var(--border-color);
 
   &__image {
     width: 150px;
@@ -51,7 +118,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     position: relative;
     top: -3rem;
-    border: 5px solid $white;
+    border: 5px solid var(--surface-bg);
     box-shadow: $box-shadow;
   }
 
@@ -78,14 +145,15 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     font-weight: 500;
     box-shadow: $box-shadow;
     cursor: pointer;
+    color: var(--body-text);
 
     &.resume__button {
-      background: $white;
+      background: var(--surface-bg);
     }
 
     &.hire__button {
-      background-color: $accent-bg;
-      color: $white;
+      background-color: var(--accent-bg);
+      color: var(--surface-bg);
     }
   }
 }
@@ -94,7 +162,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   grid-column: 2/3;
   grid-row: 3/4;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid var(--border-color);
   display: grid;
   grid-template-columns: 1fr 3fr;
 
@@ -108,7 +176,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
   padding: 1rem;
   grid-column: 2/3;
-  background-color: $accent-bg;
+  background-color: var(--accent-bg);
   border-radius: 5px;
   font-size: 0.5rem;
   display: grid;
@@ -120,11 +188,11 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   &__type {
-    color: $primary-text;
+    color: var(--primary-text);
   }
 
   &__info {
-    color: $primary-text;
+    color: var(--primary-text);
     font-weight: bold;
     text-decoration: none;
   }
@@ -134,7 +202,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   grid-column: 2/3;
   grid-row: 4/5;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid var(--border-color);
   display: grid;
   grid-template-columns: 1fr 3fr;
 
@@ -174,7 +242,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     .company {
       font-size: 0.65rem;
       font-weight: 550;
-      color: rgba(0, 0, 0, 0.7);
+      color: color-mix(in srgb, var(--body-text) 70%, transparent);
     }
     .duration {
       font-size: 0.6rem;
@@ -183,13 +251,13 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   &--footer {
-    border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-top: 1.5px solid var(--border-color);
     grid-column: 1/-1;
 
     p {
       padding: 0.2rem 1rem 0.2rem 0.5rem;
       font-size: 0.65rem;
-      color: $primary-text;
+      color: var(--primary-text);
       font-weight: 500;
     }
   }
@@ -261,7 +329,7 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     .project__title {
       font-weight: bold;
       font-size: 0.8rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid var(--border-color);
     }
   }
 
@@ -274,20 +342,20 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   &--footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--border-color);
     text-align: right;
 
     a {
       padding: 0 0.5rem;
       text-decoration: none;
-      color: #000;
+      color: var(--body-text);
       font-size: 0.7rem;
     }
   }
 }
 
 .tech__stack {
-  color: $primary-text;
+  color: var(--primary-text);
 
   &--title {
     font-size: 0.7rem;
@@ -327,9 +395,9 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   margin: 0;
   background: linear-gradient(
     149deg,
-    $primary-bg 0%,
-    $secondary-bg 25%,
-    $primary-bg 75%
+    var(--primary-bg) 0%,
+    var(--secondary-bg) 25%,
+    var(--primary-bg) 75%
   );
   display: flex;
   justify-content: space-around;

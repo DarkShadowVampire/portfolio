@@ -12,7 +12,7 @@ interface ExperienceItem {
 
 const Experience: React.FC = () => {
   return (
-    <div className="experience">
+    <section id="experience" className="experience">
       <h4>Experience</h4>
       <div className="experience__all">
         {AllExperiences.map((experience: ExperienceItem, idx: number) => (
@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

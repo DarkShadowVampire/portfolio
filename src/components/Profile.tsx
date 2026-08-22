@@ -9,10 +9,12 @@ const Profile: React.FC = () => {
     };
     return (
         <div className="profile">
-            <img src="/profile.png" alt="Profile of Sourav Swarnakar" className="profile__image" />
+            <img src="/profile.JPG" alt="Profile of Sourav Swarnakar" className="profile__image" />
             <div className="profile__details">
+                <p className="profile__eyebrow">Guidewire Developer / Kolkata, IN</p>
                 <h1>Sourav Swarnakar</h1>
-                <p>Front-End Developer</p>
+                <p className="profile__role">Guidewire Portal Developer</p>
+                <p className="profile__intro">I build clear, useful interfaces for complex products, with a soft spot for thoughtful details.</p>
             </div>
             <div className="action__buttons">
                 <button className="resume__button" onClick={viewResume}>View Resume</button>
