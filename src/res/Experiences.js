@@ -1,6 +1,6 @@
 const Experiences = [
   {
-    designation: "Associate II",
+    designation: "Senior Associate",
     company: "PwC",
     duration: "Aug 2024 - Present",
     location: "Bangalore",

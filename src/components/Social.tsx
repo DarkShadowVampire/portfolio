@@ -1,9 +1,14 @@
 import React from "react";
 
-const Social: React.FC = () => {
+interface SocialProps {
+  onRateWork: () => void;
+}
+
+const Social: React.FC<SocialProps> = ({ onRateWork }) => {
   return (
     <div className="social__icons">
-      <div className="email">
+      <div className="social__group">
+        <div className="email">
         <a
           href="mailto:srvswarnakar@gmail.com"
           target="_blank"
@@ -12,8 +17,8 @@ const Social: React.FC = () => {
         >
           <img src="/img/email-icon.svg" alt="Email icon" />
         </a>
-      </div>
-      <div className="github">
+        </div>
+        <div className="github">
         <a
           href="https://github.com/DarkShadowVampire"
           target="_blank"
@@ -22,8 +27,8 @@ const Social: React.FC = () => {
         >
           <img src="/img/github-icon.svg" alt="GitHub icon" />
         </a>
-      </div>
-      <div className="twitter">
+        </div>
+        <div className="twitter">
         <a
           href="https://twitter.com"
           target="_blank"
@@ -32,8 +37,8 @@ const Social: React.FC = () => {
         >
           <img src="/img/twitter-icon.svg" alt="Twitter icon" />
         </a>
-      </div>
-      <div className="hackerrank">
+        </div>
+        <div className="hackerrank">
         <a
           href="https://www.hackerrank.com/happysouravswar1"
           target="_blank"
@@ -42,8 +47,8 @@ const Social: React.FC = () => {
         >
           <img src="/img/hackerrank-icon.svg" alt="HackerRank icon" />
         </a>
-      </div>
-      <div className="instagram">
+        </div>
+        <div className="instagram">
         <a
           href="https://instagram.com/dark_shadow_vampire"
           target="_blank"
@@ -52,7 +57,12 @@ const Social: React.FC = () => {
         >
           <img src="/img/instagram-icon.svg" alt="Instagram icon" />
         </a>
+        </div>
       </div>
+      <button className="footer__rate-link" onClick={onRateWork} type="button">
+        <span>Rate My Work!</span>
+        <span className="footer__rate-arrow" aria-hidden="true">↗</span>
+      </button>
     </div>
   );
 };
