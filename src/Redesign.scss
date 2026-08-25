@@ -844,7 +844,14 @@
   }
 
   .contact > .location,
-  .contact > .website {
+  .contact > .website,
+  .contact > .email,
+  .contact > .github,
+  .contact > .linkedin {
+    grid-column: auto;
+  }
+
+  .contact > .location {
     grid-column: 1 / -1;
   }
 
@@ -954,17 +961,6 @@
 
   .rate-page__actions {
     margin-top: 1.5rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .contact {
-    grid-template-columns: 1fr;
-  }
-
-  .contact > .location,
-  .contact > .website {
-    grid-column: auto;
   }
 }
 
