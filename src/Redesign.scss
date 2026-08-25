@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap");
-
 .container {
   --paper: #f4f0e8;
   --ink: #171717;
@@ -830,6 +829,68 @@
     font-size: 1.25rem;
   }
 
+  .contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 1.25rem;
+    margin-top: 1.5rem;
+    padding-top: 0.25rem;
+    border-top: 0;
+  }
+
+  .contact > div {
+    min-width: 0;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact > .location,
+  .contact > .website {
+    grid-column: 1 / -1;
+  }
+
+  .contact > .website {
+    border-bottom-color: var(--blue);
+  }
+
+  .contact > .email {
+    border-bottom-color: var(--lime);
+  }
+
+  .contact > .github {
+    border-bottom-color: var(--blue);
+  }
+
+  .contact__type {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.6rem;
+  }
+
+  .contact__type::before {
+    content: "";
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+
+  .contact > .website .contact__type::before {
+    background: var(--blue);
+  }
+
+  .contact > .email .contact__type::before {
+    background: var(--lime);
+  }
+
+  .contact > .github .contact__type::before {
+    background: var(--blue);
+  }
+
+  .contact__info {
+    font-size: 0.78rem;
+  }
+
   .exp__card,
   .project__card {
     padding: 1rem;
@@ -839,6 +900,42 @@
     padding: 2.5rem 0;
   }
 
+  .social__group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .social__group > div {
+    display: grid;
+    min-width: 0;
+    margin: 0;
+    padding: 0.7rem 0;
+    place-items: center;
+  }
+
+  .social__group a {
+    display: grid;
+    min-width: 44px;
+    min-height: 44px;
+    place-items: center;
+  }
+
+  .social__icons .social__group img {
+    width: clamp(2rem, 12vw, 2.75rem);
+    height: clamp(2rem, 12vw, 2.75rem);
+  }
+
+  .footer__rate-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__rate-link span:first-child {
+    padding-left: 1rem;
+  }
+
   .rate-page__question,
   .rate-page__thanks {
     margin-top: 14vh;
@@ -846,6 +943,28 @@
 
   .rate-page h1 {
     font-size: clamp(2.35rem, 13vw, 4rem);
+  }
+
+  .rate-page__question > p:not(.rate-work__eyebrow),
+  .rate-page__thanks > p:not(.rate-work__eyebrow) {
+    max-width: 19rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .rate-page__actions {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .contact > .location,
+  .contact > .website {
+    grid-column: auto;
   }
 }
 
