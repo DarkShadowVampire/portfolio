@@ -679,11 +679,14 @@
 
   .site-nav {
     min-height: 72px;
-    padding-right: 5rem;
+    padding: 1rem 4.5rem 1rem 0;
+    gap: 1rem;
   }
 
   .site-nav nav {
-    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 0.8rem;
   }
 
   .site-nav nav a {
@@ -706,11 +709,24 @@
   .profile__image {
     width: min(68vw, 260px);
     height: 320px;
-    justify-self: start;
+    justify-self: center;
   }
 
   .profile h1 {
     font-size: clamp(2.25rem, 12vw, 5rem);
+  }
+
+  .action__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 1.75rem;
+  }
+
+  .action__buttons button {
+    justify-content: center;
+    min-width: 0;
+    padding: 0.85rem 0.7rem;
   }
 
   .about,
@@ -749,12 +765,87 @@
 
   .rate-page__actions {
     width: 100%;
+    height: 120px;
   }
 
   .footer {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1.25rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav__brand {
+    font-size: 1.45rem;
+  }
+
+  .site-nav nav {
+    gap: 0.35rem 0.55rem;
+  }
+
+  .site-nav nav a {
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
+  }
+
+  .profile {
+    gap: 2rem;
+    padding: 3rem 0 3.5rem;
+  }
+
+  .profile__image {
+    width: min(68vw, 220px);
+    height: 270px;
+    border-width: 7px;
+    box-shadow: 10px 10px 0 var(--coral);
+  }
+
+  .profile__eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
+
+  .profile h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  .profile__role {
+    font-size: 1rem;
+  }
+
+  .profile__intro {
+    font-size: 0.9rem;
+  }
+
+  .about,
+  .experience,
+  .projects {
+    gap: 1.25rem;
+    padding: 2.5rem 0;
+  }
+
+  .about > p {
+    font-size: 1.25rem;
+  }
+
+  .exp__card,
+  .project__card {
+    padding: 1rem;
+  }
+
+  .social__icons {
+    padding: 2.5rem 0;
+  }
+
+  .rate-page__question,
+  .rate-page__thanks {
+    margin-top: 14vh;
+  }
+
+  .rate-page h1 {
+    font-size: clamp(2.35rem, 13vw, 4rem);
   }
 }
 
