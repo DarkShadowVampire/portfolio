@@ -30,13 +30,13 @@ const About: React.FC = () => {
         <div className="email">
           <p className="contact__type">Email</p>
           <a
-            href="mailto:srvswarnakar@gmail.com"
+            href="mailto:happysouravswarnakar@gmail.com"
             target="_blank"
             rel="noreferrer noopener"
             className="contact__info"
             aria-label="Email (opens in a new tab)"
           >
-            srvswarnakar@gmail.com &#8599;
+            happysouravswarnakar@gmail.com &#8599;
           </a>
         </div>
         <div className="github">
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             className="contact__info"
             aria-label="LinkedIn profile (opens in a new tab)"
           >
-            LinkedIn &#8599;
+            sourav-swarnakar &#8599;
           </a>
         </div>
       </address>
