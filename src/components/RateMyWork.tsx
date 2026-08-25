@@ -46,7 +46,7 @@ const RateMyWork: React.FC<RateMyWorkProps> = ({ onBack }) => {
           <p className="rate-work__eyebrow">That made my day</p>
           <h1>Thank you!</h1>
           <p>Let&apos;s build something useful, memorable, and a little bit unexpected together.</p>
-          <a className="rate-page__hire" href="mailto:srvswarnakar@gmail.com">
+          <a className="rate-page__hire" href="mailto:happysouravswarnakar@gmail.com">
             Hire me <span aria-hidden="true">↗</span>
           </a>
         </div>

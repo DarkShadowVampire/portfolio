@@ -2,10 +2,10 @@ import React from "react";
 
 const Profile: React.FC = () => {
     const viewResume = () => {
-        window.open('/res/Sourav Swarnakar CV.pdf', '_blank', 'noopener,noreferrer');
+        window.open('/res/Sourav_Swarnakar 4.pdf', '_blank', 'noopener,noreferrer');
     };
     const hireMe = () => {
-        window.open('mailto:srvswarnakar@gmail.com', '_self');
+        window.open('mailto:happysouravswarnakar@gmail.com', '_self');
     };
     return (
         <div className="profile">

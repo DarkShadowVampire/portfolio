@@ -41,7 +41,7 @@ Lint checks run automatically before each commit.
 
 ## Author
 
-[Sourav Swarnakar](mailto:srvswarnakar@gmail.com)
+[Sourav Swarnakar](mailto:happysouravswarnakar@gmail.com)
 
 ---
 

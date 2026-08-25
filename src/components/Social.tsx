@@ -10,10 +10,10 @@ const Social: React.FC<SocialProps> = ({ onRateWork }) => {
       <div className="social__group">
         <div className="email">
         <a
-          href="mailto:srvswarnakar@gmail.com"
+          href="mailto:happysouravswarnakar@gmail.com"
           target="_blank"
           rel="noreferrer noopener"
-          aria-label="Send email to srvswarnakar@gmail.com"
+          aria-label="Send email to happysouravswarnakar@gmail.com"
         >
           <img src="/img/email-icon.svg" alt="Email icon" />
         </a>
@@ -50,7 +50,7 @@ const Social: React.FC<SocialProps> = ({ onRateWork }) => {
         </div>
         <div className="instagram">
         <a
-          href="https://instagram.com/dark_shadow_vampire"
+          href="https://instagram.com/sourav.swarnakar_"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Instagram profile"
