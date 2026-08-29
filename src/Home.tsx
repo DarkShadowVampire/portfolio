@@ -5,15 +5,26 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Social from "./components/Social";
 import RateMyWork from "./components/RateMyWork";
+import AnalyticsDebugPanel from "./components/AnalyticsDebugPanel";
 import "./Home.scss";
 import "./Redesign.scss";
 import { useState } from "react";
+import useVisitorTracking from "./hooks/useVisitorTracking";
 
 const Home = () => {
   const [isDark, setIsDark] = useState(() => {
     return window.localStorage.getItem("portfolio-theme") === "dark";
   });
   const [showRatePage, setShowRatePage] = useState(false);
+
+  // Initialize visitor tracking with all data collection
+  useVisitorTracking({
+    trackPageView: true,
+    batchSize: 10,
+    flushInterval: 30000, // Flush every 30 seconds
+    // Optional: Set analytics endpoint if you have a backend
+    // analyticsEndpoint: "https://your-analytics-endpoint.com/track",
+  });
 
   const toggleTheme = () => {
     setIsDark((currentIsDark) => {
@@ -73,6 +84,7 @@ const Home = () => {
           <Footer />
         </>
       )}
+      <AnalyticsDebugPanel isDark={isDark} />
     </div>
   );
 };
