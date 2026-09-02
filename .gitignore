@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
+# Private documentation - contains sensitive setup info
+.ANALYTICS_PRIVATE_SETUP.txt
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
