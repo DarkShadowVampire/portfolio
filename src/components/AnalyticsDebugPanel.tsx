@@ -18,7 +18,7 @@ const AnalyticsDebugPanel: React.FC<{ isDark?: boolean }> = ({ isDark = false })
   const [sortConfig, setSortConfig] = useState<{ key: string; direction: "asc" | "desc" }>({ key: "timestamp", direction: "desc" });
 
   // Replace this with your actual password
-  const ANALYTICS_PASSWORD = process.env.REACT_APP_ANALYTICS_PASSWORD || "admin123";
+  const ANALYTICS_PASSWORD = process.env.REACT_APP_ANALYTICS_PASSWORD;
 
   // Hooks must be called before any early returns
   useEffect(() => {
@@ -39,7 +39,7 @@ const AnalyticsDebugPanel: React.FC<{ isDark?: boolean }> = ({ isDark = false })
     }
   }, []);
 
-  // Keyboard shortcut to open analytics panel (Ctrl+Shift+D for Debug)
+  // Keyboard shortcut to open analytics panel (private shortcut)
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === "D") {
@@ -216,7 +216,7 @@ const AnalyticsDebugPanel: React.FC<{ isDark?: boolean }> = ({ isDark = false })
               cursor: "pointer",
               color: isDark ? "#e0e0e0" : "#333",
             }}
-            title="Close (Ctrl+Shift+D to reopen)"
+            title="Close analytics panel"
           >
             ✕
           </button>

@@ -1,53 +1,71 @@
-# Analytics Authentication Setup
+# Analytics Password Setup
 
 ## Overview
 
-The analytics dashboard is now **password-protected**. Only you can access it by entering the correct password.
+The analytics dashboard requires password authentication. Set the password via environment variables for your deployment.
 
-## Default Password
+## Configuration
 
-**Default Password:** `admin123`
+### Local Development
 
-⚠️ **CHANGE THIS IMMEDIATELY!**
+Create `.env.local` in project root:
+```
+REACT_APP_ANALYTICS_PASSWORD=your_password
+```
 
-## How to Change the Password
+Restart dev server to apply changes.
 
-### Option 1: Environment Variable (Recommended)
+### Production & Higher Environments
 
-1. Create or update `.env.local` file in your project root:
+Set the environment variable during build time:
 
+**GitHub Actions:**
+```yaml
+env:
+  REACT_APP_ANALYTICS_PASSWORD: ${{ secrets.ANALYTICS_PASSWORD }}
+run: npm run build
+```
+
+**Vercel/Netlify:** Add to Environment Variables dashboard
+
+**Docker:**
 ```bash
-# .env.local
-REACT_APP_ANALYTICS_PASSWORD=your_secret_password_here
+docker build --build-arg REACT_APP_ANALYTICS_PASSWORD="password" .
 ```
 
-2. Restart your development server:
-```bash
-npm start
-```
+## Important
 
-3. The analytics panel will now require your custom password
+⚠️ Environment variables are bundled at **build time**
 
-### Option 2: Direct Code Change
-
-Edit [src/components/AnalyticsDebugPanel.tsx](src/components/AnalyticsDebugPanel.tsx):
-
-```typescript
-// Around line 14
-const ANALYTICS_PASSWORD = "your_secret_password_here";
-```
-
-## Features
-
-✅ **Password Protection** - Only you can access analytics
-✅ **Session-based Auth** - Authentication persists during browser session
-✅ **Auto-logout on Browser Close** - Session storage clears when browser closes
-✅ **Login Error Messages** - Visual feedback for wrong password
-✅ **Logout Button** - Quickly log out to secure the panel
+- Must set password when building
+- Rebuild required to change password
+- Different passwords for each environment
 
 ## Security Notes
 
-- Password is **NOT encrypted** in the environment variable
+✅ Use secrets management (GitHub Secrets, etc.)
+✅ Never commit `.env.local` to version control
+✅ Use strong, unique passwords
+✅ Rotate passwords regularly
+✅ Keep access details private
+
+## Troubleshooting
+
+**Password doesn't work after deployment?**
+- Confirm env var was set during build
+- Rebuild after adding the variable
+- Clear browser cache
+
+**Getting default fallback password?**
+- Variable name must be `REACT_APP_ANALYTICS_PASSWORD`
+- Check CI/CD logs to confirm build-time environment
+- Redeploy with correct variable
+
+---
+
+For specific analytics access details, see private documentation (not in version control).
+
+
 - This is suitable for **development/personal use only**
 - For production dashboards, use proper authentication (OAuth, JWT, etc.)
 - Authentication state is stored in **sessionStorage** (cleared on browser close)
