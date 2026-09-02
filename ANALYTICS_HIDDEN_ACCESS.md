@@ -38,7 +38,7 @@ This will open the analytics dashboard in the bottom-right corner.
 
 ## Password
 
-**Default:** `admin123`
+**Default:** `myself alter ego`
 
 See [ANALYTICS_AUTH_SETUP.md](ANALYTICS_AUTH_SETUP.md) to change the password.
 

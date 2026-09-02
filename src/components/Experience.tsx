@@ -8,6 +8,8 @@ interface ExperienceItem {
   duration: string;
   location: string;
   technologies?: string;
+  logo?: string;
+  brandColor?: string;
 }
 
 const Experience: React.FC = () => {
@@ -23,6 +25,8 @@ const Experience: React.FC = () => {
             duration={experience.duration}
             location={experience.location}
             technologies={experience.technologies}
+            logo={experience.logo}
+            brandColor={experience.brandColor}
           />
         ))}
       </div>

@@ -1,6 +1,7 @@
 import Profile from "./components/Profile";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Social from "./components/Social";
@@ -67,6 +68,7 @@ const Home = () => {
         <nav aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
           <a href="#projects">Projects</a>
         </nav>
       </header>
@@ -78,6 +80,7 @@ const Home = () => {
             <Profile />
             <About />
             <Experience />
+            <Certifications />
             <Projects />
             <Social onRateWork={openRatePage} />
           </main>
