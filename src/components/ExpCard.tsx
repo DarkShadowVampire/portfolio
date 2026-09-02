@@ -6,6 +6,8 @@ interface ExpCardProps {
   duration: string;
   location: string;
   technologies?: string;
+  logo?: string;
+  brandColor?: string;
 }
 
 const ExpCard: React.FC<ExpCardProps> = ({
@@ -14,12 +16,20 @@ const ExpCard: React.FC<ExpCardProps> = ({
   duration,
   location,
   technologies,
+  logo,
+  brandColor,
 }) => {
+  const cardStyle = brandColor
+    ? {
+        "--brand-color": brandColor,
+      } as React.CSSProperties & { "--brand-color": string }
+    : {};
+
   return (
-    <div className="exp__card">
+    <div className="exp__card" style={cardStyle}>
       <img
-        src="img/appldev.png"
-        alt="experience img"
+        src={logo || "img/appldev.png"}
+        alt={`${company} logo`}
         className="exp__card--image"
       />
       <div className="exp__card--details">
