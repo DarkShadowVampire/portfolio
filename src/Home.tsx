@@ -14,7 +14,18 @@ import useVisitorTracking from "./hooks/useVisitorTracking";
 
 const Home = () => {
   const [isDark, setIsDark] = useState(() => {
-    return window.localStorage.getItem("portfolio-theme") === "dark";
+    // Check if theme preference is saved in localStorage
+    const savedTheme = window.localStorage.getItem("portfolio-theme");
+    if (savedTheme) {
+      return savedTheme === "dark";
+    }
+
+    // If no saved preference, use system time to determine theme
+    // Dark mode: 6 PM (18:00) to 6 AM
+    // Light mode: 6 AM to 6 PM
+    const currentHour = new Date().getHours();
+    const isNightTime = currentHour >= 18 || currentHour < 6;
+    return isNightTime;
   });
   const [showRatePage, setShowRatePage] = useState(false);
 
