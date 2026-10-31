@@ -890,7 +890,8 @@
 
   .about,
   .experience,
-  .projects {
+  .projects,
+  .certifications {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 3rem 0;
@@ -980,7 +981,8 @@
 
   .about,
   .experience,
-  .projects {
+  .projects,
+  .certifications {
     gap: 1.25rem;
     padding: 2.5rem 0;
   }
